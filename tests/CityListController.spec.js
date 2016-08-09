@@ -55,4 +55,29 @@ describe('CityListController', function () {
     })
   })
 
+	describe('updateCityPopulation function', function() {
+		it('should call $timeout with a delay of 2000 milliseconds', function() {
+			var $scope = {};
+			var time;
+
+			function mockTimeout(func, milliseconds) {
+				time = milliseconds;
+			}
+
+			$controller('CityListController as vm', { $scope: $scope, $timeout: mockTimeout });
+
+			expect(time).toBe(2000);
+		});
+
+		it('changes the population of a city', function() {
+			var $scope = {};
+
+			$controller('CityListController as vm', { $scope: $scope });
+
+			$scope.vm.updateCityPopulation({name: 'San Diego', population: 20000000});
+
+			expect($scope.vm.cities[0].population).toBe(20000000);
+		})
+	})
+
 });

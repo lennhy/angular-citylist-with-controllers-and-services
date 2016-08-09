@@ -1,5 +1,5 @@
 
-function CityListController() {
+function CityListController($timeout) {
   this.cities = [
     {
       name: 'San Diego',
@@ -26,6 +26,16 @@ function CityListController() {
   this.addCity = function(city) {
     this.cities.push(city);
   }
+
+  $timeout(this.updateCityPopulation = function(city) {
+    var i;
+    for (i = 0; i < this.cities.length; i++) {
+      if (this.cities[i].name === city.name) {
+        this.cities[i].population = city.population;
+      }
+    }
+  }, 2000);
+
 }
 
 angular
