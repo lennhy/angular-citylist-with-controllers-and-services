@@ -14,7 +14,7 @@ Setup the directory structure as follows:
 ```
 ├── js/
 │   ├── app/
-│   │   ├── CityList/
+│   │   ├── controllers/
 │   │   ├── app.js
 │   ├── angular.js
 ├── index.html
@@ -25,12 +25,12 @@ You can find `index.html` and `angular.js` in this repo.
 
 Create a new module in `js/app/app.js`, named `app`.
 
-Create a controller named `CityListController` inside `js/app/CityList/CityListController.js` and attach it to a module named `app`. The function should take one parameter - `$scope`.
+Create a controller named `CityListController` inside `js/app/controllers/CityListController.js` and attach it to a module named `app`.
 
 Don't forget to initiate our module `app` using `ng-app` on a HTML element - otherwise we won't see anything!
 
 Initiate our controller `CityListController` using `ng-controller` on a HTML element inside our previous one.
 
-Inside `CityListController`, assign some values to the `$scope` object. You could copy our previous example - create the properties `name`, `email` and `phone`.  
+Inside `CityListController`, assign some values to the `ControllerAs` object `this`. You could copy our previous example - create the properties `name`, `email` and `phone`.  
 
 Now, we need to display these values inside our HTML. Using `{{ }}` (double curlys), display the values you created.
