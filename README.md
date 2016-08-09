@@ -10,7 +10,16 @@
 
 ## Instructions
 
-Setup the directory structure as follows:
+run
+```
+> npm install
+```
+to use tests
+```
+karma start
+```
+
+Setup the directory structure as follows before running tests
 
 ```
 ├── js/
