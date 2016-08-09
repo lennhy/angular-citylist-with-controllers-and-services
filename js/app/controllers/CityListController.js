@@ -1,5 +1,5 @@
 
-function CityListController($timeout) {
+function CityListController($scope, $timeout) {
   this.cities = [
     {
       name: 'San Diego',
@@ -37,6 +37,8 @@ function CityListController($timeout) {
   }, 2000);
 
 }
+
+CityListController.$inject = ['$scope', '$timeout']
 
 angular
   .module('app')

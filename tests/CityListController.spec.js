@@ -52,6 +52,19 @@ describe('CityListController', function () {
     expect($scope.vm.cities[0].population).not.toBe(undefined);
   })
 
+	describe('$inject', function() {
+		var annotated = annotate(CityListController);
+
+		it('should have a $inject property', function() {
+			expect(CityListController.$inject).not.toBe(undefined);
+		});
+
+		it('should have $scope and $timeout in the $inject property', function() {
+			expect(CityListController.$inject[0]).toBe('$scope');
+			expect(CityListController.$inject[1]).toBe('$timeout');
+		});
+	});
+
 
   describe('addCity function', function() {
     it('should have a function to add a city to the the cities array', function() {

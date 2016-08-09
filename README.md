@@ -6,6 +6,7 @@
 - Create an element for Controller binding
 - Show 5 cities with names and population in the view using ng-repeat
 - Build an add city method in the CityListController
+- Use $inject method for minification
 
 ## Instructions
 
@@ -31,6 +32,8 @@ Don't forget to initiate our module `app` using `ng-app` on a HTML element - oth
 
 Initiate our controller `CityListController` using `ng-controller` on a HTML element inside our previous one.
 
-Inside `CityListController`, assign some values to the `ControllerAs` object `this`. You could copy our previous example - create the properties `name`, `email` and `phone`.  
+Inside `CityListController`, assign some values to the `ControllerAs` object `this`.
 
 Now, we need to display these values inside our HTML. Using `{{ }}` (double curlys), display the values you created.
+
+Use $inject with the $scope and $timeout built-in Angular services
