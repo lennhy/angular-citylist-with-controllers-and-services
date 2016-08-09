@@ -36,4 +36,4 @@ Inside `CityListController`, assign some values to the `ControllerAs` object `th
 
 Now, we need to display these values inside our HTML. Using `{{ }}` (double curlys), display the values you created.
 
-Use $inject with the $scope and $timeout built-in Angular services
+Use $inject with the $scope and $timeout built-in Angular services.
