@@ -1,3 +1,23 @@
+var FN_ARGS = /^function\s*[^\(]*\(\s*([^\)]*)\)/m;
+var FN_ARG_SPLIT = /,/;
+var FN_ARG = /^\s*(_?)(\S+?)\1\s*$/;
+var STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/mg;
+
+function annotate (fn) {
+	var $inject = [];
+	fn = fn.toString();
+	var first = fn.replace(STRIP_COMMENTS, '');
+	var second = first.match(FN_ARGS)[1];
+	var third = second.split(FN_ARG_SPLIT);
+	third.forEach(function (arg) {
+		arg.replace(FN_ARG, function (all, underscore, name) {
+			$inject.push(name);
+		});
+	});
+	return $inject;
+}
+
+
 describe('CityListController', function () {
 	var $controller;
 
