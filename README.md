@@ -1,4 +1,4 @@
-# Hello World
+# City List
 
 ## Objectives
 
@@ -29,6 +29,8 @@ Create a new module in `js/app/app.js`, named `app`.
 Create a controller named `CityListController` inside `js/app/controllers/CityListController.js` and attach it to a module named `app`.
 
 Don't forget to initiate our module `app` using `ng-app` on a HTML element - otherwise we won't see anything!
+
+We need to declare out js dependencies in the index.html page as well with `<script>` tags
 
 Initiate our controller `CityListController` using `ng-controller` on a HTML element inside our previous one.
 
